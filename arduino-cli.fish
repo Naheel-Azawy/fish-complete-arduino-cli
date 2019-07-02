@@ -70,7 +70,7 @@ complete -c arduino-cli -n "$s lib && $n $c" -a update-index -f -d 'Updates the 
 complete -c arduino-cli -n "$s lib && $n $c" -a upgrade      -f -d 'Upgrades installed libraries'
 
 # Sketch
-complete -c arduino-cli -n "$s config" -a new -d 'Create a new Sketch'
+complete -c arduino-cli -n "$s sketch" -a new -d 'Create a new Sketch'
 
 # Upload
 complete -c arduino-cli -n "$s upload" -s b -l fqbn  -a '(__fish_arduino_cli_devices)' -r -f -d 'Fully Qualified Board Name, e.g.: arduino:avr:uno'
