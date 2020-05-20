@@ -2,7 +2,7 @@ set -l s '__fish_seen_subcommand_from'
 set -l n 'not __fish_seen_subcommand_from'
 
 function __fish_arduino_cli_devices
-    arduino-cli board listall | sed -En '1d; s/ //g; s/(.+)\s+(.+)\:(.+)/\2:\3\t\1/p'
+    arduino-cli board listall | sed -En '1d; s/\s+$//g; s/(.+)\s+(.+)\:(.+)/\2:\3\t\1/p'
 end
 
 # Available Commands
